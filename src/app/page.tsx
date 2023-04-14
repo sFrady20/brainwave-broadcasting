@@ -3,6 +3,7 @@ import Image from "next/image";
 import { DateTime } from "luxon";
 import { useMemo } from "react";
 import { groupBy, map, orderBy, entries } from "lodash";
+import ComingSoon from "./ComingSoon";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,7 @@ let schedule = [
   })),
 ];
 
-//schedule = [];
+schedule = [];
 
 export default function Home() {
   const days = useMemo(
@@ -25,11 +26,11 @@ export default function Home() {
     [schedule]
   );
 
+  if (!schedule?.length) return <ComingSoon />;
+
   return (
     <>
-      <div className="h-[500px] px-[var(--page-px)] py-20">
-        <p>TEST</p>
-      </div>
+      <div className="min-h-[500px] px-[var(--page-px)] py-20 flex justify-center items-center"></div>
       <header className="px-[var(--page-px)] bg-zinc-900 sticky top-0 z-60">
         <div className=" w-full flex items-center justify-between border-b border-zinc-800">
           <div className="h-[var(--page-header-h)] flex items-center space-x-10">
@@ -64,11 +65,11 @@ export default function Home() {
                     <div className="col-span-3 font-bold <xl:(col-span-3) <md:(hidden)">
                       <div className="relative pb-[56%] border">
                         {/* <Image
-                          src={block.image}
-                          fill
-                          alt={"Show"}
-                          className={"object-cover"}
-                        /> */}
+                  src={block.image}
+                  fill
+                  alt={"Show"}
+                  className={"object-cover"}
+                /> */}
                       </div>
                     </div>
                     <div className="col-span-6 font-bold space-y-2 <xl:(col-span-5) <md:(col-span-7)">

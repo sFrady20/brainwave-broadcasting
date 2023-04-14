@@ -1,5 +1,5 @@
-import "windi.css";
 import "./globals.css";
+import "windi.css";
 
 export const metadata = {
   title: "Brainwave",
