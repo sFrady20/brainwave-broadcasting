@@ -1,7 +1,8 @@
+import "windi.css";
 import "./globals.css";
 
 export const metadata = {
-  title: "Brainwave Broadcasting Network",
+  title: "Brainwave",
   description: "",
 };
 
@@ -12,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-zinc-900 text-zinc-50">{children}</body>
     </html>
   );
 }
