@@ -1,6 +1,8 @@
 body {
   --page-header-h: 80px;
   --page-px: 95px;
+
+  overflow: hidden;
 }
 
 @media screen and (max-width: 1279.9px) {
