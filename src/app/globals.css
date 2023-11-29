@@ -1,18 +1,3 @@
 body {
-  --page-header-h: 80px;
-  --page-px: 95px;
-
-  overflow: hidden;
-}
-
-@media screen and (max-width: 1279.9px) {
-  body {
-    --page-px: 40px;
-  }
-}
-
-@media screen and (max-width: 767.9px) {
-  body {
-    --page-px: 20px;
-  }
+  background: #040505;
 }
