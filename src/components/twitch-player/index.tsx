@@ -1,17 +1,16 @@
 "use client";
 
-import { TwitchEmbed } from "react-twitch-embed";
+import { TwitchEmbed, TwitchEmbedProps } from "react-twitch-embed";
 
-const Player = () => {
+export const TwitchPlayer = (props: TwitchEmbedProps) => {
+  const { ...rest } = props;
+
   return (
     <TwitchEmbed
       channel="brainwavebroadcasting"
-      width={"100vw"}
-      height={"100vh"}
       autoplay
       allowFullscreen
+      {...rest}
     />
   );
 };
-
-export default Player;
